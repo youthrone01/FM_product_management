@@ -1,0 +1,23 @@
+<div class="box">
+  <h1>Create a New Product</h1>
+  
+  <form (submit)="onSubmit()" #formData = "ngForm">
+    Title: <input type="text" name="title" required 
+    [(ngModel)]="product.title"
+    minlength="4" 
+    #title = "ngModel">
+    {{title.errors | json}}<br><br>
+
+    Price: <input type="number" name="price" required min="100"
+    [(ngModel)]="product.price"
+    #price = "ngModel">
+    {{price.errors | json}}<br><br>
+
+    Image Url: <input type="url" name="image" required 
+    [(ngModel)]="product.imgurl" 
+    #image = "ngModel">
+    {{image.errors | json}}<br><br>
+
+    <input type="submit" [disabled]="!formData.valid" value="Add Product">
+  </form>
+</div>

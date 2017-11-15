@@ -1,0 +1,11 @@
+<div class='box1'>
+    <div *ngIf="all_products">
+        <div *ngFor="let product of all_products" class="products">
+            <img src="{{product.imgurl}}" alt="product">
+            <h2>{{product.title}}</h2>
+            <h2>{{product.price | currency}}</h2>
+            <button (click)="editProduct(product._id)">Edit</button>
+            <button (click)="deleteProduct(product._id)">Delete</button>
+        </div>
+    </div>
+</div>

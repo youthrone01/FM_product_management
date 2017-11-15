@@ -1,0 +1,7 @@
+.box {
+    height: 600px;
+    width: 800px;
+    border: 1px solid black;
+    overflow: scroll;
+    background-color: lightblue;
+}
